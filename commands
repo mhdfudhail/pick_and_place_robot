@@ -1,0 +1,14 @@
+----------------important commands-------------------
+  1. gazebo
+  	-> ros2 launch mycobot_gazebo mycobot_280_arduino_bringup_ros2_control_classic_gazebo.launch.py use_rviz:=false
+  
+  2. moveit2
+  	-> ros2 launch mycobot_moveit_config_manual_setup move_group.launch.py
+  
+  3. pick and place
+  	-> ros2 run arm_controller pick_${color_RGB} or pick_all
+  
+  4. link_attacher
+  	-> ros2 service call /DETACHLINK linkattacher_msgs/srv/DetachLink "{model1_name: 'mycobot_280', link1_name: 'gripper_right3', model2_name: 'wood_cube_red', link2_name: 'link'}"
+  	-> ros2 service call /ATTACHLINK linkattacher_msgs/srAtDetachLink "{model1_name: 'mycobot_280', link1_name: 'gripper_right3', model2_name: 'wood_cube_red', link2_name: 'link'}"
+

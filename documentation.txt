@@ -1,0 +1,38 @@
+------------------------------------------------------------
+------------ Pick and Place Robot---------------------------
+------------------------------------------------------------
+version:
+  ROS2/humble
+  ubuntu 22.04
+  Moveit2
+------------------------------------------------------------
+*** 
+please find results in Videos folder
+***
+
+Folders:
+	1.ROS2 packages:
+		mycobot_ros2:
+		IFRA_LinkAttacher:
+		arm_controller:
+		robot_control_server:
+		robot_interface:
+		vision_pkg:
+		
+	2. Results:
+		Videos:	
+	3. Analyses:
+		rqt
+
+-------------------------------------------------------------
+
+How to Run:
+ 1. Gazebo: ros2 launch mycobot_gazebo mycobot_280_arduino_bringup_ros2_control_classic_gazebo.launch.py use_rviz:=false
+ 2. Moveit: ros2 launch mycobot_moveit_config_manual_setup move_group.launch.py
+ 3. objects: ros2 run vision_pkg vision_objects
+ 4. pick&place: ros2 run arm_controller pick_${color_RGB} or pick_all
+
+
+
+
+	
